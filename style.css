@@ -1,0 +1,145 @@
+/* Little Leaf Café: solution */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #2b2118;
+  background-color: #faf6f0;
+}
+
+/* Header: logo on the left, menu on the right */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: #2f4a3a;
+}
+
+.logo {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* The page in the centre */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.intro,
+.info {
+  text-align: center;
+}
+
+h1 {
+  color: #2f4a3a;
+}
+
+/* The cards: a row that wraps */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  width: 280px;
+  padding: 16px;
+  background-color: white;
+  border: 1px solid #e6dccf;
+  border-radius: 12px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #b5462a;
+}
+
+footer {
+  padding: 16px;
+  text-align: center;
+  color: white;
+  background-color: #2f4a3a;
+}
+
+/* Small screens: header in a column, one card per row */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
+
+/* Week 6: buttons, the order and the booking form */
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  color: white;
+  background-color: #2f4a3a;
+  cursor: pointer;
+}
+
+.selected {
+  border: 2px solid #2f4a3a;
+}
+
+#order-list {
+  list-style: none;
+  padding: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 320px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+input {
+  padding: 8px;
+  font-size: 16px;
+}
+
+.error {
+  font-weight: bold;
+  color: #b5462a;
+}
+
+.success {
+  font-weight: bold;
+  color: #2f4a3a;
+}

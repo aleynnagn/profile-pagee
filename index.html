@@ -1,49 +1,111 @@
 <!DOCTYPE html>
-<html lang="en"
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width-device-width,initial-scale=1.0">
-<title>Profile page></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Little Leaf Café · Menu</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Aleyna Günaydın</h1>
-        <p>Management Information System</p>
-    </header>
+  <header>
+    <p class="logo">Little Leaf Café</p>
     <nav>
-        <ul>
-            <li> <a href="#about">about me</a></li>
-            <li> <a href="#courses">My courses</a></li>
-            <li> <a href="#contact">Contact</a></li>
-        </ul>
+      <a href="#menu">Menu</a>
+      <a href="#hours">Opening hours</a>
+      <a href="#booking">Book a table</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <main>
-        <section id="about"></section>
-        <h2>About me</h2>
-        <img src="indir.jpg"
-        alt="profile page" width="200" height="200"
-        <br>
-        <p> I am a third year student in MIS.</p>
-        <section id="courses">
-            <h2>My courses</h2>
-            <table border="1"
-            <tr>
-                <th>Course Code</th>
-                <th>Course Name</th>
-            </tr>
-            <tr>
-                <td>MIS407</td>
-                <td>Decision support system</td>
-            </tr>
-            <tr>
-                <td>IMS403</td>
-                <td>Internshıp</td>
-            </tr>
-            <tr>
-                <td>IMS301</td>
-                <td>Web design and Internet programing</td>
-            </tr>
-        </section>
-    </main>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Our menu</h1>
+      <p>Fresh coffee, tea and home-made treats, every day.</p>
+    </section>
+
+    <section id="menu" class="cards">
+      <article class="card">
+        <img src="images/coffee.svg" alt="A cup of coffee on a saucer" width="300" height="200">
+        <h2>Turkish coffee</h2>
+        <p>Served with a glass of water and a piece of Turkish delight.</p>
+        <p class="price">₺60</p>
+        <button class="add" data-price="60">Add to order</button>
+      </article>
+
+      <article class="card">
+        <img src="images/tea.svg" alt="A glass of tea on a saucer" width="300" height="200">
+        <h2>Tea</h2>
+        <p>Fresh black tea in a tulip glass.</p>
+        <p class="price">₺20</p>
+        <button class="add" data-price="20">Add to order</button>
+      </article>
+
+      <article class="card">
+        <img src="images/simit.svg" alt="A simit with sesame seeds" width="300" height="200">
+        <h2>Simit</h2>
+        <p>Baked this morning, with sesame seeds.</p>
+        <p class="price">₺25</p>
+        <button class="add" data-price="25">Add to order</button>
+      </article>
+
+      <article class="card">
+        <img src="images/cake.svg" alt="A slice of cake with a strawberry" width="300" height="200">
+        <h2>Strawberry cake</h2>
+        <p>Soft sponge cake with cream and fresh strawberries.</p>
+        <p class="price">₺90</p>
+        <button class="add" data-price="90">Add to order</button>
+      </article>
+
+      <article class="card">
+        <img src="images/toast.svg" alt="A toasted sandwich cut in two" width="300" height="200">
+        <h2>Cheese toast</h2>
+        <p>Toasted bread with melted cheese and tomato.</p>
+        <p class="price">₺80</p>
+        <button class="add" data-price="80">Add to order</button>
+      </article>
+
+      <article class="card">
+        <img src="images/lemonade.svg" alt="A glass of lemonade with a straw" width="300" height="200">
+        <h2>Lemonade</h2>
+        <p>Home-made, with fresh lemons and mint.</p>
+        <p class="price">₺50</p>
+        <button class="add" data-price="50">Add to order</button>
+      </article>
+    </section>
+
+    <section id="order" class="info">
+      <h2>Your order</h2>
+      <p id="order-summary">No items yet.</p>
+      <ul id="order-list"></ul>
+      <button id="clear">Clear order</button>
+    </section>
+
+    <section id="booking" class="info">
+      <h2>Book a table</h2>
+      <form id="booking-form">
+        <label for="guest-name">Your name</label>
+        <input id="guest-name" type="text">
+        <label for="guests">Number of guests (1–8)</label>
+        <input id="guests" type="number">
+        <button type="submit">Book</button>
+      </form>
+      <p id="booking-message"></p>
+    </section>
+
+    <section id="hours" class="info">
+      <h2>Opening hours</h2>
+      <p>Every day, 08:00–22:00</p>
+    </section>
+
+    <section id="contact" class="info">
+      <h2>Contact</h2>
+      <p>12 Garden Street · (000) 000 00 00</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Little Leaf Café</p>
+  </footer>
 </body>
-    
+</html>
